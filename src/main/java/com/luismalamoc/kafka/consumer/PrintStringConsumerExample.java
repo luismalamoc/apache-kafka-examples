@@ -1,4 +1,4 @@
-package com.luismalamoc.consumer;
+package com.luismalamoc.kafka.consumer;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -28,7 +28,7 @@ public class PrintStringConsumerExample {
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
 
         //subscribe to topic
-        consumer.subscribe(Arrays.asList("mauricio-topic"));
+        consumer.subscribe(Arrays.asList("cars-topic"));
 
         //infinite poll loop
         while (true) {

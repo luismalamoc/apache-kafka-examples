@@ -1,4 +1,4 @@
-package com.luismalamoc.producer;
+package com.luismalamoc.kafka.producer;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
@@ -19,9 +19,9 @@ public class StringProducerExample {
         //create producer
         Producer<Integer, String> producer = new KafkaProducer<Integer, String>(props);
 
-        //send messages to mauricio-topic
+        //send messages to the topic
         for(int i = 0; i < 100; i++) {
-            ProducerRecord producerRecord = new ProducerRecord<Integer, String>("mauricio-topic", i, "Test Message #" + Integer.toString(i));
+            ProducerRecord producerRecord = new ProducerRecord<Integer, String>("cars-topic", i, "Car number #" + Integer.toString(i));
             producer.send(producerRecord);
         }
 
