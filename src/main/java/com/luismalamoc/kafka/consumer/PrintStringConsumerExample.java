@@ -28,7 +28,7 @@ public class PrintStringConsumerExample {
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
 
         //subscribe to topic
-        consumer.subscribe(Arrays.asList("cars-topic"));
+        consumer.subscribe(Arrays.asList("mauricio-topic"));
 
         //infinite poll loop
         while (true) {

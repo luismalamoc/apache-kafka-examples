@@ -21,7 +21,7 @@ public class StringProducerExample {
 
         //send messages to the topic
         for(int i = 0; i < 100; i++) {
-            ProducerRecord producerRecord = new ProducerRecord<Integer, String>("cars-topic", i, "Car number #" + Integer.toString(i));
+            ProducerRecord producerRecord = new ProducerRecord<Integer, String>("mauricio-topic", i, "Car number #" + Integer.toString(i));
             producer.send(producerRecord);
         }
 
